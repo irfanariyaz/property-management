@@ -13,6 +13,7 @@ public class CalculatorController {
 
     @GetMapping("/sub/{num1}/{num2}")
     public Double  subtract(@PathVariable("num1") Double num1, @PathVariable("num2") Double num2){
+        System.out.println("test");
         return num1 - num2;
     }
 
