@@ -1,24 +1,22 @@
 package com.mycompany.propertymanagement.entity;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.*;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "PROPERTY_NAME")
+@Table(name = "USER_TABLE")
 @Getter
 @Setter
 @NoArgsConstructor
-public class PropertyEntity {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private  String title;
-    private  String description;
-
-    private  Double price;
-    private  String address;
+    private  String ownerName;
+    @Column(nullable = false, name = "EMAIL")
+    private  String ownerEmail;
+    private  String phone;
+    private  String password;
 }
