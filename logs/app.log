@@ -1,0 +1,152 @@
+2024-05-02 19:01:32,947 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.LoggerConverter@662f5666 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:347)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:329)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.mycompany.propertymanagement.PropertyManagementApplication.main(PropertyManagementApplication.java:10)
+Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.classic.pattern.LoggerConverter@662f5666 - failed to parse integer string [1.] java.lang.NumberFormatException: For input string: "1."
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:277)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:255)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:81)
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:61)
+	at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:189)
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:332)
+	... 19 common frames omitted
+	Suppressed: java.lang.NumberFormatException: For input string: "1."
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:661)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at ch.qos.logback.classic.pattern.NamedConverter.start(NamedConverter.java:92)
+		at ch.qos.logback.core.pattern.ConverterUtil.startConverters(ConverterUtil.java:37)
+		at ch.qos.logback.core.pattern.PatternLayoutBase.start(PatternLayoutBase.java:90)
+		at ch.qos.logback.classic.encoder.PatternLayoutEncoder.start(PatternLayoutEncoder.java:28)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandleComplex(ImplicitModelHandler.java:208)
+		at ch.qos.logback.core.model.processor.ImplicitModelHandler.postHandle(ImplicitModelHandler.java:186)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:257)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.secondPhaseTraverse(DefaultProcessor.java:253)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.traversalLoop(DefaultProcessor.java:90)
+		at ch.qos.logback.core.model.processor.DefaultProcessor.process(DefaultProcessor.java:106)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.processModel(GenericXMLConfigurator.java:208)
+		at org.springframework.boot.logging.logback.SpringBootJoranConfigurator.processModel(SpringBootJoranConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:170)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:122)
+		at ch.qos.logback.core.joran.GenericXMLConfigurator.doConfigure(GenericXMLConfigurator.java:65)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:287)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.lambda$loadConfiguration$1(LogbackLoggingSystem.java:249)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.withLoggingSuppressed(LogbackLoggingSystem.java:467)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:244)
+		... 23 common frames omitted
+2024-05-02 19:09:32,528 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-05-02 19:09:32,616 INFO com.mycompany.propertymanagement.PropertyManagementApplication [main] Starting PropertyManagementApplication using Java 21.0.1 with PID 29592 (C:\Users\irfan\IdeaProjects\property-management\property-management\target\classes started by irfan in C:\Users\irfan\IdeaProjects\property-management\property-management)
+2024-05-02 19:09:32,618 INFO com.mycompany.propertymanagement.PropertyManagementApplication [main] The following 1 profile is active: "dev"
+2024-05-02 19:09:34,242 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 19:09:34,351 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2024-05-02 19:09:35,270 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-05-02 19:09:35,291 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 19:09:35,305 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2024-05-02 19:09:35,305 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-02 19:09:35,393 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2024-05-02 19:09:35,393 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2693 ms
+2024-05-02 19:09:35,643 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 19:09:35,773 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 19:09:35,849 INFO org.hibernate.cache.internal.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-05-02 19:09:36,340 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 19:09:36,391 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2024-05-02 19:09:36,680 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16b76858
+2024-05-02 19:09:36,683 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-05-02 19:09:36,810 WARN org.hibernate.orm.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-02 19:09:38,323 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 19:09:38,433 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 19:09:39,085 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-02 19:09:39,656 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 19:09:39,687 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-05-02 19:09:39,699 INFO com.mycompany.propertymanagement.PropertyManagementApplication [main] Started PropertyManagementApplication in 8.336 seconds (process running for 9.986)
+2024-05-02 19:11:45,369 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 19:11:45,453 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-05-02 19:11:45,568 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-05-02 19:11:51,849 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-05-02 19:11:51,961 INFO c.m.p.PropertyManagementApplication [main] Starting PropertyManagementApplication using Java 21.0.1 with PID 33764 (C:\Users\irfan\IdeaProjects\property-management\property-management\target\classes started by irfan in C:\Users\irfan\IdeaProjects\property-management\property-management)
+2024-05-02 19:11:51,963 INFO c.m.p.PropertyManagementApplication [main] The following 1 profile is active: "dev"
+2024-05-02 19:11:53,651 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 19:11:53,759 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2024-05-02 19:11:54,698 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2024-05-02 19:11:54,722 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 19:11:54,726 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2024-05-02 19:11:54,727 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-02 19:11:54,830 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2024-05-02 19:11:54,831 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2732 ms
+2024-05-02 19:11:55,080 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 19:11:55,194 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 19:11:55,251 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-05-02 19:11:55,697 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 19:11:55,741 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-05-02 19:11:55,994 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21b744ec
+2024-05-02 19:11:55,997 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-05-02 19:11:56,092 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-02 19:11:57,485 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 19:11:57,581 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 19:11:58,260 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-02 19:11:58,974 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 19:11:59,022 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path ''
+2024-05-02 19:11:59,039 INFO c.m.p.PropertyManagementApplication [main] Started PropertyManagementApplication in 8.392 seconds (process running for 9.893)
+2024-05-02 19:12:21,758 INFO o.a.c.c.C.[.[.[/] [http-nio-8080-exec-4] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-02 19:12:21,758 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-4] Initializing Servlet 'dispatcherServlet'
+2024-05-02 19:12:21,760 INFO o.s.w.s.DispatcherServlet [http-nio-8080-exec-4] Completed initialization in 1 ms
+2024-05-02 19:12:22,017 INFO c.m.p.e.CustomExceptionHandler [http-nio-8080-exec-4] Inside field validation: password -Password cannot be empty
+2024-05-02 19:12:22,018 INFO c.m.p.e.CustomExceptionHandler [http-nio-8080-exec-4] Inside field validation: ownerEmail -Owner email should be between 1 and 50
+2024-05-02 19:12:22,019 INFO c.m.p.e.CustomExceptionHandler [http-nio-8080-exec-4] Inside field validation: ownerEmail -Owner Email cannot be empty
+2024-05-02 19:15:32,880 INFO c.m.p.e.CustomExceptionHandler [http-nio-8080-exec-5] Inside field validation: EMAIL_ALREADY_EXIST -The Email which you are trying to register already exist
+2024-05-02 19:19:45,740 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 19:19:45,824 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-05-02 19:19:45,936 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-05-02 19:23:59,596 INFO o.h.v.i.u.Version. [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-05-02 19:23:59,697 INFO c.m.p.PropertyManagementApplication. [main] Starting PropertyManagementApplication using Java 21.0.1 with PID 35104 (C:\Users\irfan\IdeaProjects\property-management\property-management\target\classes started by irfan in C:\Users\irfan\IdeaProjects\property-management\property-management)
+2024-05-02 19:23:59,698 INFO c.m.p.PropertyManagementApplication. [main] The following 1 profile is active: "dev"
+2024-05-02 19:24:01,029 INFO o.s.d.r.c.RepositoryConfigurationDelegate. [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 19:24:01,133 INFO o.s.d.r.c.RepositoryConfigurationDelegate. [main] Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2024-05-02 19:24:01,900 INFO o.s.b.w.e.t.TomcatWebServer. [main] Tomcat initialized with port 8080 (http)
+2024-05-02 19:24:01,917 INFO o.a.c.h.Http11NioProtocol. [main] Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 19:24:01,929 INFO o.a.c.c.StandardService. [main] Starting service [Tomcat]
+2024-05-02 19:24:01,929 INFO o.a.c.c.StandardEngine. [main] Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-02 19:24:02,035 INFO o.a.c.c.C.[.[.[/]. [main] Initializing Spring embedded WebApplicationContext
+2024-05-02 19:24:02,035 INFO o.s.b.w.s.c.ServletWebServerApplicationContext. [main] Root WebApplicationContext: initialization completed in 2242 ms
+2024-05-02 19:24:02,276 INFO o.h.j.i.u.LogHelper. [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 19:24:02,386 INFO o.h.Version. [main] HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 19:24:02,440 INFO o.h.c.i.RegionFactoryInitiator. [main] HHH000026: Second-level cache disabled
+2024-05-02 19:24:02,845 INFO o.s.o.j.p.SpringPersistenceUnitInfo. [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 19:24:02,891 INFO c.z.h.HikariDataSource. [main] HikariPool-1 - Starting...
+2024-05-02 19:24:03,189 INFO c.z.h.p.HikariPool. [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e3ed455
+2024-05-02 19:24:03,193 INFO c.z.h.HikariDataSource. [main] HikariPool-1 - Start completed.
+2024-05-02 19:24:03,322 WARN o.h.o.deprecation. [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-02 19:24:04,881 INFO o.h.e.t.j.p.i.JtaPlatformInitiator. [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 19:24:05,071 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean. [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 19:24:05,622 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration. [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-02 19:24:06,145 INFO o.a.c.h.Http11NioProtocol. [main] Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 19:24:06,180 INFO o.s.b.w.e.t.TomcatWebServer. [main] Tomcat started on port 8080 (http) with context path ''
+2024-05-02 19:24:06,189 INFO c.m.p.PropertyManagementApplication. [main] Started PropertyManagementApplication in 7.76 seconds (process running for 9.291)
+2024-05-02 19:24:19,350 INFO o.a.c.c.C.[.[.[/]. [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-02 19:24:19,351 INFO o.s.w.s.DispatcherServlet. [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-05-02 19:24:19,353 INFO o.s.w.s.DispatcherServlet. [http-nio-8080-exec-1] Completed initialization in 2 ms
+2024-05-02 19:24:19,600 INFO c.m.p.e.CustomExceptionHandler. [http-nio-8080-exec-1] Inside field validation: password -Password cannot be empty
+2024-05-02 19:46:55,601 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean. [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 19:46:55,696 INFO c.z.h.HikariDataSource. [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-05-02 19:46:55,811 INFO c.z.h.HikariDataSource. [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

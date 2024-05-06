@@ -1,0 +1,6 @@
+http://localhost:8080/api-docs
+http://localhost:8080/swagger-ui/index.html
+https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html
+http://localhost:8080/actuator
+for * --> one relationship,default is FetchType = EAGER_>while getting parent,also get child entity data
+for * --> Many relationship,default is FetchType = LAZY

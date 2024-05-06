@@ -19,4 +19,7 @@ public class UserEntity {
     private  String ownerEmail;
     private  String phone;
     private  String password;
+//    @OneToOne(mappedBy = "userEntity",fetch = FetchType.LAZY)
+//    private Address address;
+
 }
